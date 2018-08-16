@@ -82,16 +82,15 @@ namespace ConsoleBasics
         {
             Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Currency: {0:c}", number);
+            Console.WriteLine("Currency: {0:c}", Double.Parse(number));
         }
 
         public static void FormatToDecimal()
         {
             Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Decimal: {0:d10}", number);
+            int temp = int.Parse(number);
+            Console.WriteLine("Decimal: {0:d10}", temp);
         }
 
         public static void FormatToExponential()
