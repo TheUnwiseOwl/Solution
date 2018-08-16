@@ -23,43 +23,54 @@ namespace ConsoleBasics
             Console.WriteLine("[8] for Round-trip");
             Console.WriteLine("[9] for Hexadecimal");
             string choice = Console.ReadLine();
+            Console.WriteLine("Enter the number to be formatted");
+
 
             switch (choice)
             {
                 case "1":
                     FormatToCurrency();
+                    Flow();
                     break;
 
                 case "2":
                     FormatToDecimal();
+                    Flow();
                     break;
 
                 case "3":
                     FormatToExponential();
+                    Flow();
                     break;
 
                 case "4":
                     FormatToFixedPoint();
+                    Flow();
                     break;
 
                 case "5":
                     FormatToGeneral();
+                    Flow();
                     break;
 
                 case "6":
                     FormatToNumber();
+                    Flow();
                     break;
 
                 case "7":
                     FormatToPercent();
+                    Flow();
                     break;
 
                 case "8":
                     FormatToRoundTrip();
+                    Flow();
                     break;
 
                 case "9":
                     FormatToHexadecimal();
+                    Flow();
                     break;
 
                 case "4al":
@@ -80,72 +91,57 @@ namespace ConsoleBasics
         //Formatting Methods
         public static void FormatToCurrency()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Console.WriteLine("Currency: {0:c}", Double.Parse(number));
+            Console.WriteLine($"Currency: {Double.Parse(number):c}");
         }
 
         public static void FormatToDecimal()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            int temp = int.Parse(number);
-            Console.WriteLine("Decimal: {0:d10}", temp);
+            //int temp = int.Parse(number);
+            Console.WriteLine($"Decimal: {int.Parse(number):d10}");
         }
 
         public static void FormatToExponential()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
             Console.WriteLine($"Exponential: {Double.Parse(number):e}");
         }
 
         public static void FormatToFixedPoint()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Fixed-point: {0:f3}", number);
+            Console.WriteLine($"Fixed-point: {Double.Parse(number):f3}");
         }
 
         public static void FormatToGeneral()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("General: {0:g}", number);
+            Console.WriteLine($"General: {Double.Parse(number):g}");
         }
 
         public static void FormatToNumber()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Number: {0:n}", number);
+            Console.WriteLine($"Number: {Double.Parse(number):n}");
         }
 
         public static void FormatToPercent()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Percent: {0:p}", number);
+            Console.WriteLine($"Percent: {Double.Parse(number):p}");
         }
 
         public static void FormatToRoundTrip()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Round-trip: {0:r}", number);
+            Console.WriteLine($"Round-trip: {Double.Parse(number):r}");
         }
 
         public static void FormatToHexadecimal()
         {
-            Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Hexadecimal: {0:x}", number);
+            Console.WriteLine($"Hexadecimal: {Int64.Parse(number):x}");
         }
     }
 }
