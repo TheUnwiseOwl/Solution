@@ -97,8 +97,7 @@ namespace ConsoleBasics
         {
             Console.WriteLine("Enter the number to be formatted");
             string number = Console.ReadLine();
-            Double.Parse(number);
-            Console.WriteLine("Exponential: {0:e}", number);
+            Console.WriteLine($"Exponential: {Double.Parse(number):e}");
         }
 
         public static void FormatToFixedPoint()
